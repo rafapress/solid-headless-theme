@@ -1,0 +1,1227 @@
+/*
+Theme Name: SOLID Headless Theme
+Theme URI: https://www.hausti.app/
+Description: Tema desenvolvido utilizando conceito SOLID, desacoplado e Back End separado do Front End (WP-API)
+Author: Rafael Peres
+Version: 1.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: solid-headless-theme
+*/
+
+/*@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');*/
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/*-----------------------------
+-> HEADER
+-----------------------------*/
+
+.cabecalho-padrao {
+	display: none;
+}
+
+html, body {
+	background-color: #CCF91B;
+	color: #666;
+	font-family: 'Poppins', 'Open Sans', sans-serif;
+	font-size: 15px;
+	font-weight: 400;
+	margin: 0;
+	overflow-x: hidden;
+	padding: 0;
+}
+
+html {
+	scroll-behavior: smooth;
+}
+
+* {
+	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+}
+
+header {
+	position: relative;
+	z-index: 100 !important;
+}
+
+	header.header-scroll {
+		background: url('assets/images/fundo-poligonos-2.png') center no-repeat, linear-gradient(to bottom, #64AB0C, #B3E520 90%);
+		background-size: cover;
+		box-shadow: 0 2px 10px 0px rgba(50, 50, 50, .6);
+		display: none;
+		position: fixed;
+		top: 0;
+		z-index: 1000 !important;
+	}
+
+		header.header-scroll .logotipo-cabecalho-scroll {
+			margin: 25px 0;
+		}
+
+			header.header-scroll .logotipo-cabecalho-scroll img {
+				height: auto;
+				width: 200px;
+			}
+
+	header.cabecalho-home {
+		background: url('assets/images/fundo-poligonos.png') no-repeat, linear-gradient(to bottom, #64AB0C, #CCF91B 80%);
+		background-size: cover;
+		height: 1400px;
+		margin-top: -300px;
+		padding-top: 300px;
+	}
+
+		header.cabecalho-home .logotipo-cabecalho-home {
+			margin: 60px 0 0 90px;
+		}
+
+			header.cabecalho-home .logotipo-cabecalho-home img {
+				height: auto;
+				max-width: 335px;
+				width: 100%;
+			}
+
+		header .idiomas {
+			margin: 20px 0 0 90px;
+		}
+
+			header .idiomas img {
+				border: 2px solid #F4F4F4 !important;
+				border-radius: 5px !important;
+				margin-right: 5px !important;
+				opacity: 0.7 !important;
+				padding: 0 !important;
+				transition: all 1s;
+				width: 30px;
+			}
+
+				header .idiomas img:hover {
+					opacity: 1 !important;
+				}
+
+		header.cabecalho-home .menu-icones-cabecalho-home {
+			margin: 60px 90px 0;
+			position: relative;
+			text-align: right;
+		}
+
+			header.cabecalho-home .menu-icones-cabecalho-home .redes-sociais-cabecalho-home {
+				color: #FFF;
+				font-size: 15px;
+				margin-top: 20px;
+			}
+
+				header.cabecalho-home .menu-icones-cabecalho-home .redes-sociais-cabecalho-home div {
+					display: inline-block;
+					margin-left: 5px;
+				}
+
+					header.cabecalho-home .menu-icones-cabecalho-home .redes-sociais-cabecalho-home div img {
+						cursor: pointer;
+						height: 35px;
+						width: 35px;
+					}
+
+			header div.colchetes-menu {
+				color: #000;
+				display: inline-block;
+				font-weight: 400;
+			}
+
+		header.cabecalho-home .conteudo-cabecalho-home {
+			margin-top: 120px;
+		}
+
+		header.cabecalho-home .titulo-cabecalho-software-house h1 {
+			color: #8C9A53;
+			font-family: 'Montserrat', 'Open Sans', sans-serif;
+			font-size: 99px;
+			font-weight: 800;
+			margin: 150px 0 0 0;
+			letter-spacing: -1px;
+		}
+
+		header.cabecalho-home .titulo-cabecalho-software-house h2 {
+			color: #000;
+			font-family: 'Montserrat', 'Open Sans', sans-serif;
+			font-size: 162px;
+			font-weight: 900;
+			letter-spacing: -1px;
+			line-height: 80px;
+			margin-left: -5px;
+		}
+
+		header.cabecalho-home .textos-cabecalho-home {
+			color: #373737;
+			margin: 70px 0 0 4px;
+		}
+
+			header.cabecalho-home .textos-cabecalho-home p.frase-software-house-masterplus {
+				font-size: 24px;
+				margin: 0;
+			}
+
+			header.cabecalho-home .textos-cabecalho-home p.frase-software-desenvolvido {
+				font-size: 15.9px;
+				line-height: 20px;
+				margin: 0;
+			}
+
+			header.cabecalho-home .botao-cabecalho-quero-saber-mais {
+				border-radius: 20px;
+				border-bottom-right-radius: 0 !important;
+				display: inline-block;
+				margin: 50px 0 0;
+				padding: 30px 55px;
+			}
+
+		header.cabecalho-home .imagem-destaque-cabecalho img {
+			margin-left: 100px !important;
+		}
+
+	header.cabecalho-interno {
+		background: url('assets/images/fundo-cabecalho-interno.png') no-repeat center center;
+		background-size: cover;
+		height: 496px;
+		margin-top: -150px;
+		padding-top: 160px;
+	}
+
+		header .logotipo-cabecalho-interno {
+			margin-top: 30px;
+		}
+
+			header .logotipo-cabecalho-interno img {
+				height: auto;
+				max-width: 450px;
+				width: 100%;
+			}
+
+.icone-mouse {
+	height: auto;
+	margin: 0 auto 10px;
+	position: relative;
+	width: 20px;
+	-webkit-animation: action 0.6s infinite alternate;
+	animation: action 0.6s infinite alternate;
+}
+
+	@-webkit-keyframes action {
+		0% { transform: translateY(0); }
+		100% { transform: translateY(-12px); }
+	}
+
+	@keyframes action {
+		0% { transform: translateY(0); }
+		100% { transform: translateY(-12px); }
+	}
+
+.texto-icone-mouse {
+	color: #000;
+	font-size: 13px;
+	font-weight: 400;
+	position: relative;
+	text-align: center;
+}
+
+h1.titulo-secoes {
+	font-size: 45px;
+	font-weight: 700;
+	line-height: 55px;
+}
+
+.traco-titulos-secoes {
+	background-color: #000;
+	height: 3px;
+	margin-top: 50px;
+	max-width: 1000px;
+	width: 100%;
+}
+
+	.traco-titulos-secoes::after {
+		background-color: #000;
+		content: '';
+		height: 18px;
+		max-width: 250px;
+		position: absolute;
+		width: 100%;
+	}
+
+/*-----------------------------
+-> O QUE FAZEMOS
+-----------------------------*/
+
+section.o-que-fazemos {
+	background: url('assets/images/fundo-poligonos.png') no-repeat center;
+	background-size: 100%;
+	height: 100%;
+	padding-top: 120px;
+}
+
+	section.o-que-fazemos .container-solucoes {
+		margin-top: 70px;
+	}
+
+		section.o-que-fazemos .container-solucoes .itens-solucoes {
+			margin: 10px 0;
+			min-height: 320px;
+			padding-right: 40px;
+			position: relative;
+		}
+
+			section.o-que-fazemos .container-solucoes .botao-saiba-mais-solucao {
+				background-color: #FFF;
+				color: #000;
+				cursor: pointer;
+				display: none;
+				font-weight: 500;
+				padding: 15px 25px;
+				position: relative;
+				transition: all 1s;
+			}
+
+			section.o-que-fazemos .container-solucoes .botoes-solucoes-colunas-direita {
+				margin-left: 40px !important;
+			}
+
+				section.o-que-fazemos .container-solucoes .botao-saiba-mais-solucao:hover {
+					background-color: #000;
+					color: #FFF;				
+				}
+
+					section.o-que-fazemos .container-solucoes .botao-saiba-mais-solucao:hover a {
+						color: #FFF;
+					}
+
+		section.o-que-fazemos .container-solucoes .itens-solucoes-colunas-direita {
+			padding-right: 0;
+			padding-left: 40px;
+		}
+
+			section.o-que-fazemos .container-solucoes .itens-solucoes .icone-solucao {
+				display: inline-block;
+				vertical-align: middle;
+			}
+
+			section.o-que-fazemos .container-solucoes .itens-solucoes h2 {
+				display: inline-block;
+				font-size: 25px;
+				font-weight: 700;
+				letter-spacing: 0;
+				max-width: 300px;
+				text-transform: uppercase;
+				vertical-align: middle;
+				width: 100%;
+			}
+
+				section.o-que-fazemos .container-solucoes .itens-solucoes h2 a:hover {
+					color: #D6004E !important;
+				}
+
+			section.o-que-fazemos .container-solucoes .itens-solucoes p {
+				color: #000;
+				font-size: 15px;
+				font-weight: 400;
+				margin: 40px 0 0;
+				text-align: left;
+			}
+
+			section.o-que-fazemos .container-solucoes a {
+				color: #000 !important;
+				transition: all .5s;
+			}
+
+			section.conteudo-solucao {
+				color: #414141;
+				margin: 270px auto 0 !important;
+				padding: 0 25px !important;
+				position: relative;
+			}
+
+				section.conteudo-solucao h1 {
+					margin-top: 20px;
+				}
+
+				section.conteudo-solucao .icone-titulo-solucao {
+					margin: 70px 0 20px -10px;
+				}
+
+/*-----------------------------
+-> LINGUAGES E TECNOLOGIAS
+-----------------------------*/
+
+section.conheca-tecnologias {
+	background: url('assets/images/fundo-tecnologias.png') no-repeat center center;
+	background-size: cover;
+	box-shadow: 0 100px 50px #CCF91B inset, 0 -100px 50px #CCF91B inset;
+	height: 100%;
+	padding-top: 80px;
+}
+
+	section.conheca-tecnologias .container-tecnologias {
+		margin-top: 80px;
+	}
+
+		section.conheca-tecnologias .container-tecnologias p {
+			color: #000;
+			font-size: 15px;
+			font-weight: 400;
+		}
+
+/*-----------------------------
+-> SOBRE NÓS
+-----------------------------*/
+
+section.sobre-nos {
+	background: url('assets/images/fundo-poligonos.png') no-repeat bottom center;
+	background-color: #CCF91B;
+	background-size: cover;
+	box-shadow: 0 150px 50px #CCF91B inset, 0 -150px 50px #CCF91B inset;
+	height: 100%;
+	padding-top: 90px;
+}
+
+	section.sobre-nos .container-sobre-nos {
+		margin-top: 80px;
+	}
+
+		section.sobre-nos .container-sobre-nos h2.chamada-venha-hausti {
+			font-size: 22px !important;
+		}
+
+		section.sobre-nos .container-sobre-nos h2 {
+			font-family: 'Open Sans', 'Montserrat', sans-serif;
+			font-weight: 600;
+			letter-spacing: -1px;
+			margin: 25px 0 8px;
+		}
+
+		section.sobre-nos .container-sobre-nos p {
+			color: #000;
+			font-size: 15px;
+			font-weight: 400;
+		}
+
+		section.sobre-nos .container-sobre-nos .software-cinco-estrelas {
+			display: block;
+			margin: 100px 20px 0 0;
+			text-align: right;
+		}
+
+			section.sobre-nos .container-sobre-nos .software-cinco-estrelas h3 {
+				font-family: 'Poppins', 'Open Sans', 'Montserrat', sans-serif;
+				font-size: 28px;
+				font-weight: 400;
+				letter-spacing: -0.5px;
+				line-height: 39px;
+				text-align: right;
+			}
+
+				section.sobre-nos .container-sobre-nos .software-cinco-estrelas h3 strong {
+					font-weight: 600 !important;
+				}
+
+			section.sobre-nos .container-sobre-nos .software-cinco-estrelas img {
+				margin-top: 30px;
+			}
+
+			section.sobre-nos .container-sobre-nos .imagem-software-cinco-estrelas img {
+		    height: auto;
+		    margin-left: 60px;
+		    margin-top: -250px;
+				width: 800px;
+			}
+
+/*-----------------------------
+-> BLOG // HOME
+-----------------------------*/
+
+section.blog-home {
+	margin-top: -80px;
+}
+
+	section.blog-home .container-blog-home {
+		margin-top: 50px;
+	}
+
+		.container-ultimos-posts {
+			color: #000;
+			padding: 20px;
+			position: relative;
+		}
+
+			.container-ultimos-posts .imagem-post-destaque-home {
+				border: 4px solid #FFF;
+				border-radius: 5px;
+				margin: 20px 0;
+			}
+
+			.container-ultimos-posts .data-post {
+				color: #666;
+				font-size: 14px;
+				margin-bottom: 10px;
+			}
+
+			.container-ultimos-posts .titulo-ultimos-posts {
+				color: #000 !important;
+				font-size: 22px;
+				height: 90px;
+				line-height: 28px;
+			}
+
+				.container-ultimos-posts .titulo-ultimos-posts a, .container-ultimos-posts .titulo-ultimos-posts a:hover {
+					color: #000;
+				}
+
+.resumo-post-ultimos-home {
+	margin-bottom: 80px;
+	margin-top: 20px;
+}
+
+.ultimos-posts-leia-mais {
+	bottom: 0 !important;
+	margin-left: 0 !important;
+	position: absolute !important;
+	top: initial !important;
+	vertical-align: bottom;
+}
+
+	.ultimos-posts-leia-mais a {
+		color: #FFF !important;
+	}
+
+/*-----------------------------
+-> BLOG // PÁGINA LISTAGEM
+-----------------------------*/
+
+section.conteudo-blog {
+	color: #414141;
+	margin: 270px auto 0 !important;
+	padding: 0 25px !important;
+	position: relative;
+}
+
+	section.conteudo-blog .container-blog {
+		margin-top: 60px;
+	}
+
+	section.conteudo-blog .container-ultimos-posts {
+		margin-bottom: 50px;
+	}
+
+/*-----------------------------
+-> BLOG // ARTIGO
+-----------------------------*/
+
+.conteudo-artigo {
+	color: #414141;
+	margin: 270px auto 0 !important;
+	padding: 0 25px !important;
+	position: relative;
+}
+
+	.conteudo-artigo hr {
+		margin: 20px 0;
+	}
+
+	.conteudo-artigo .imagem-artigo-blog {
+		border: 5px solid #FFF;
+		border-radius: 10px;
+		margin-bottom: 15px;
+	}
+
+	.conteudo-artigo .data-post-autor {
+		color: #414141;
+		font-size: 14px;
+		margin-bottom: 30px;
+		text-align: right;
+	}
+
+	.conteudo-artigo .titulo-mobile h1 {
+		color: #414141;
+		font-size: 23px;
+		font-weight: 600 !important;
+	}
+
+/*-----------------------------
+-> PÁGINA NÃO ENCONTRADA (404)
+-----------------------------*/
+
+section.pagina-nao-encontrada {
+	margin-bottom: 100px;
+	margin-top: 350px;
+}
+
+	section.pagina-nao-encontrada h2 {
+		font-size: 32px;
+		text-align: center;
+	}
+
+/*-----------------------------
+-> GLOBAL
+-----------------------------*/
+
+main {
+	position: relative;
+	z-index: 100;
+}
+
+section.container-small {
+	max-width: 1240px !important;
+	position: relative;
+	z-index: 100;
+}
+
+.solucoes-itens {
+	display: inline-block;
+	margin-top: 50px;
+}
+
+	.solucoes-itens h2 {
+		font-size: 26px;
+		letter-spacing: -0.5px;
+		margin-bottom: 30px;
+	}
+
+	.solucoes-itens a {
+		display: inline-block;
+		margin-right: 10px;
+	}
+
+	.titulo-solucao-hover {
+		color: #000;
+		font-size: 18px;
+	}
+
+h1, h2, h3 {
+	color: #000;
+	font-family: 'Open Sans', 'Poppins', sans-serif;
+	letter-spacing: -.5px;
+	margin: 0;
+	padding: 0;
+	text-align: left;
+}
+
+h1 {
+	font-size: 35px;
+}
+
+h2 {
+	font-size: 20px;
+}
+
+h3 {
+	font-size: 18px;
+}
+
+strong {
+	font-weight: 600;
+}
+
+p.frase-chamada-abaixo-titulos {
+	color: #000;
+	font-weight: 400;
+	margin: 50px 0 30px;
+	text-align: left;
+}
+
+p.instrucoes-topicos {
+	color: #A04E6C;
+	font-weight: 500;
+	margin-top: 30px;
+}
+
+a {
+	color: #246FD6;
+  padding-bottom: 13px;
+  position: relative;
+	text-decoration: none;
+  transition: all .5s;
+}
+
+	a:hover {
+    color: #000;
+	}
+
+label {
+	width: 100%;
+}
+
+input, textarea, select {
+	background-color: #FFF;
+	border: 1px solid transparent;
+	border-radius: 5px;
+	color: #6E6E6E;
+	font-family: 'Poppins', 'Roboto', 'Helvetica Neue', Arial;
+	font-size: 15px;
+	margin: 10px 0 0;
+	opacity: 1;
+	outline: none;
+	padding: 25px;
+	resize: none;
+	transition: all 1s;
+	width: 100%;
+}
+
+	textarea {
+		height: 100%;
+		max-height: 243px !important;
+	}
+
+	input::placeholder, textarea::placeholder, select::placeholder {
+		color: #666;
+	}
+
+	select.erro {
+		color: #FF0000 !important;
+		font-weight: 500;
+	}
+
+	input.erro::placeholder, textarea.erro::placeholder {
+		color: #FF0000 !important;
+		font-weight: 500;
+	}
+
+	input:focus, textarea:focus, select:focus {
+		background-color: #F4F4F4 !important;
+		border: 1px solid #0C3914 !important;
+	}
+
+.container {
+	max-width: 1540px !important;
+}
+
+.small-container {
+	margin: 0 auto;
+	max-width: 1140px !important;
+}
+
+.botao-padrao {
+	background-color: #D6004E;
+	border-radius: 8px;
+	color: #FFF;
+	cursor: pointer;
+	display: inline-block;
+	font-size: 15px;
+	font-weight: 400;
+	margin-left: 50px;
+	padding: 19px 30px 17px;
+	position: relative;
+	top: -2px;
+	transition: all 1s;
+}
+
+	.botao-padrao:hover {
+		background-color: #000;
+		color: #FFF;
+	}
+
+.botao-voltar {
+	font-size: 13px;
+	padding: 15px 25px 12px;
+}
+
+.overlay {
+	background-color: #000;
+	display: none;
+	height: 100%;
+	left: 0;
+	margin: 0;
+	overflow-y: auto;
+	overflow-x: hidden;
+	padding: 30px;
+	position: fixed;
+	top: 0;
+	width: 100%;
+	z-index: 1000;
+}
+
+.conteudo-overlay {
+	color: #FFF;
+	display: none;
+	position: fixed;
+	text-align: center;
+	top: 50%;
+	width: 100%;
+	z-index: 1001;
+}
+
+	.conteudo-overlay .botao-fechar-overlay {
+		background-color: #CAF51F;
+		color: #000;
+		margin: 30px auto 0;
+		max-width: 250px;
+		padding: 25px;
+		text-align: center;
+		width: 100%;
+		z-index: 1002;
+	}
+
+		.conteudo-overlay .botao-fechar-overlay:hover {
+			background-color: #FFF !important;
+			color: #000;
+		}
+
+.topo {
+	background-image: url('imagens/topo.png'); 
+	bottom: 20px !important;
+	border-radius: 100%;
+	cursor: pointer;
+	display: none;
+	height: 40px;
+	position: fixed;
+	right: 30px;
+	width: 40px;
+	z-index: 10000;
+}
+
+.botao-whatsapp {
+	background-color: #2FBD64;
+	bottom: 40px;
+	border: 2px solid #FFF;
+	border-radius: 100%;
+	color: #FFF;
+	font-size: 40px;
+	height: 80px;
+	padding: 10px;
+	position: fixed;
+	right: 40px;
+	text-align: center;
+	transition: all 1s;
+	width: 80px;
+	z-index: 150;
+}
+
+	.botao-whatsapp:hover {
+		background-color: #24914D;
+	}
+
+.cmplz-cookiebanner { }
+
+	.cmplz-cookiebanner .cmplz-buttons .cmplz-btn {
+		font-size: 13px !important;
+		font-family: 'Poppins', 'Open Sans', sans-serif !important;
+		font-weight: 300 !important;
+		text-transform: uppercase;
+	}
+
+	.cmplz-cookiebanner .cmplz-links.cmplz-documents {
+		display: none;
+	}
+
+/*-----------------------------
+-> IMAGEM FINAL RODAPÉ
+-----------------------------*/
+
+section.imagem-final-rodape {
+	text-align: center;
+}
+
+	section.imagem-final-rodape .imagem-simbolo-logo-sentada img {
+		height: auto;
+		margin: 30px auto 0;
+		max-width: 550px;
+		width: 100%;
+	}
+
+/*-----------------------------
+-> FOOTER
+-----------------------------*/
+
+footer {
+	background: url('assets/images/fundo-poligonos.png') no-repeat, linear-gradient(to bottom, #CCF91B, #659D0E 80%);
+	background-size: cover;
+	padding-top: 150px;
+	position: relative;
+}
+
+/*	footer .container-rodape {
+		color: #FFF;
+		margin-top: 0;
+		padding-bottom: 30px;
+		width: 100%;
+	}*/
+
+	footer .contato .enviar-formulario-contato {
+		margin-left: auto;
+		margin-top: 20px;
+		padding: 28px 30px 26px;
+		position: relative;
+	}
+
+	footer .redes-sociais-rodape {
+		margin-bottom: 50px;
+		text-align: left;
+	}
+
+		footer .redes-sociais-rodape img {
+			cursor: pointer;
+			height: auto;
+			margin-right: 5px;
+			width: 35px;
+		}
+
+		footer .redes-sociais-rodape p {
+			color: #FFF;
+		}
+
+	footer .menu-rodape {
+		margin: 50px 0 40px;
+	}
+
+	footer .textos-conteudo-rodape {
+		margin-bottom: 25px;
+	}
+
+	footer .logotipo-hausti-rodape {
+		color: #FFF;
+		margin: 20px auto;
+		text-align: left;
+	}
+
+		footer .logotipo-hausti-rodape img {
+			height: auto;
+			max-width: 250px;
+			width: 100%;
+		}
+
+  footer .direitos-reservados-rodape {
+  	color: #FFF;
+		font-size: 13px;
+		font-weight: 400;
+  }
+
+  footer .melhor-experiencia {
+		font-size: 12px;
+		text-align: center;
+  }
+
+/*li.menu-item.menu-item-type-custom.menu-item-object-custom.menu-item-115 {
+*/
+li.menu-item.menu-item-type-custom.menu-item-object-custom.menu-item-122 {
+	display: none;
+}
+
+/*-----------------------------
+-> RESPONSIVO
+-----------------------------*/
+
+@media (min-width: 200px) and (max-width: 1140px) {
+
+	li.menu-item.menu-item-type-custom.menu-item-object-custom.menu-item-122 {
+		display: block;
+	}
+
+	header.cabecalho-home {
+		background: url(assets/images/fundo-poligonos.png) no-repeat, linear-gradient(to bottom, #64AB0C, #CCF91B 80%);
+		background-size: cover;
+		height: 600px;
+    margin-top: 0;
+		padding-top: 30px !important;
+	}
+
+	header.cabecalho-home .logotipo-cabecalho-home, header.logotipo-cabecalho-padrao {
+		margin: 20px 0 10px 0;
+	}
+
+		header.cabecalho-home .logotipo-cabecalho-home img, header.cabecalho-padrao .logotipo-cabecalho-padrao img {
+			height: auto;
+			max-width: 300px;
+			width: 100%;
+		}
+
+	header .idiomas {
+		margin: 20px 0 0 0;
+	}
+
+	header.cabecalho-home .conteudo-cabecalho-home {
+		margin-top: 0;
+	}
+
+	header.cabecalho-home .titulo-cabecalho-software-house h1 {
+		font-size: 58px;
+		margin: 40px auto 0 !important;
+	}
+
+	header.cabecalho-home .titulo-cabecalho-software-house h2 {
+		font-size: 95px;
+		line-height: 50px;
+	}
+
+	header.cabecalho-home .textos-cabecalho-home {
+		color: #373737;
+		margin: 50px 0 30px;
+	}
+
+		header.cabecalho-home .textos-cabecalho-home p.frase-software-house-masterplus {
+			line-height: 25px;
+		}
+
+		header.cabecalho-home .textos-cabecalho-home p.frase-software-desenvolvido {
+			line-height: 25px;
+			margin: 20px auto;
+		}
+
+		header.cabecalho-home .botao-cabecalho-quero-saber-mais {
+			display: block;
+			margin: 0 auto;
+			padding: 25px 55px;
+			width: 250px;
+		}
+
+	.container-icone-mouse {
+		margin-top: 20px;
+		position: relative !important;
+		z-index: 0 !important;
+	}
+
+		.container-icone-mouse .icone-mouse {
+			margin: 130px auto 15px;
+		}
+
+	header.cabecalho-home .imagem-destaque-cabecalho {
+		margin-top: 120px;
+	}
+
+		header.cabecalho-home .imagem-destaque-cabecalho img {
+			margin: 50px 0 0 0 !important;
+			margin-left: -50px !important;
+			max-width: 120% !important;
+		}
+
+	section.o-que-fazemos {
+		margin-top: 320px;
+	}
+
+	section.blog-home {
+		margin-top: 50px;
+	}
+
+		section.blog-home .container-blog-home {
+			margin-top: 0;
+		}
+
+		.container-ultimos-posts {
+			color: #000;
+			margin: 30px 0;
+			padding: 0;
+			position: relative;
+		}
+
+			.container-ultimos-posts .titulo-ultimos-posts {
+				letter-spacing: initial !important;
+				line-height: 30px !important;
+			}
+
+			.container-ultimos-posts .ultimos-posts-leia-mais {
+				bottom: -20px !important;
+			}
+
+	header.cabecalho-interno {
+		height: 300px;
+		margin-top: 0;
+		padding-top: 40px;
+	}
+
+		header .logotipo-cabecalho-interno {
+			margin-top: 0; 
+		}
+
+			header .logotipo-cabecalho-interno img {
+				height: auto;
+				max-width: 250px;
+			}
+
+		header.cabecalho-interno .menu-mobile-icone i {
+			color: #FFF;
+			font-size: 28px;
+		}
+
+	header .frase-cabecalho-agencia-especialista {
+		margin-bottom: 80px;
+		margin-top: 100px;
+	}
+
+	header .imagem-destaque-cabecalho {
+		margin-top: -50px;
+	}
+
+	header.header-scroll {
+		background-color: #FFF;
+		box-shadow: 0px 2px 10px 0px rgba(50, 50, 50, .3);
+		display: none;
+		position: fixed !important;
+		top: 0;
+		z-index: 1000 !important;
+	}
+
+		header.header-scroll .menu-mobile-icone {
+	    margin: 0 auto 20px;
+		}
+
+			header.header-scroll .menu-mobile-icone i {
+				color: #000;
+			}
+
+		header.header-scroll .logotipo-cabecalho img {
+			height: auto;
+			max-width: 250px;
+		}
+
+	p.frase-chamada-secao {
+		font-size: 15px;
+		margin-bottom: 10px;
+	}
+
+	.titulo-secao h1 {
+		font-size: 40px;
+	}
+
+h1.titulo-secoes {
+	font-size: 22px;
+	font-weight: 600;
+	line-height: normal;
+	letter-spacing: -0.5px;
+}
+
+	.traco-titulos-secoes {
+		margin-top: 30px;
+	}
+
+	.traco-titulos-secoes::after {
+		max-width: 200px;
+	}
+
+	section.conheca-tecnologias .container-tecnologias,
+	section.sobre-nos .container-sobre-nos,
+	section.o-que-fazemos .container-solucoes {
+		margin-top: 50px;
+	}
+
+		section.o-que-fazemos .container-solucoes {
+			margin-top: 10px;
+			padding: 0;
+		}
+
+		section.o-que-fazemos .container-solucoes .itens-solucoes {
+			margin: 20px 0 20px;
+			min-height: auto !important;
+			padding-right: 0;
+		}
+
+	    section.o-que-fazemos .container-solucoes .itens-solucoes h2 {
+				font-size: 20px;
+				margin-top: 15px;
+				margin-left: 20px;
+				padding-left: 0;
+	    }
+
+		section.o-que-fazemos .container-solucoes .itens-solucoes-colunas-direita {
+			padding-left: 0;
+		}
+
+		section.o-que-fazemos .container-solucoes .itens-solucoes p {
+			margin: 15px 0 0;
+		}
+
+	section.conteudo-solucao { }
+
+    section.conteudo-solucao h1.titulo-secoes {
+			font-size: 35px !important;
+			letter-spacing: -1px;
+    }
+
+		section.conteudo-solucao .icone-titulo-solucao {
+			margin: 20px 0 20px -10px !important;
+		}
+
+		section.conteudo-solucao h1 {
+			margin-top: 10px;
+			font-size: 23px;
+		}
+
+		.solucoes-itens h2 {
+			font-size: 22px !important;
+			letter-spacing: -1px !important;
+		}
+
+		.solucoes-itens .icone-solucao a {
+			margin-right: 5px !important;
+		}
+
+		.solucoes-itens .icone-solucao img {
+			width: 42px !important;
+		}
+
+	section.conheca-tecnologias, section.sobre-nos {
+		padding-top: 50px;
+	}
+
+	section.sobre-nos .container-sobre-nos .software-cinco-estrelas {
+		margin: 10px 0 0;
+		text-align: left;
+	}
+
+		section.sobre-nos .container-sobre-nos .software-cinco-estrelas h3 {
+			font-size: 16px;
+			font-weight: 400;
+			letter-spacing: -0.2px;
+			line-height: normal;
+			text-align: left;
+		}
+
+		section.sobre-nos .container-sobre-nos .software-cinco-estrelas img {
+			margin-top: 15px;
+		}
+
+	section.sobre-nos .container-sobre-nos .imagem-software-cinco-estrelas img {
+		margin-top: 20px;
+		margin-left: 0;
+		max-width: 700px !important;
+		width: 100%;
+	}
+
+	section.conteudo-blog { }
+
+		section.conteudo-blog .container-blog {
+			margin-top: 0 !important;
+		}
+
+		section.conteudo-blog .container-ultimos-posts {
+			margin-bottom: 40px;
+		}
+
+	section.pagina-nao-encontrada {
+		margin-bottom: 50px;
+		margin-top: 300px;
+	}
+
+		section.pagina-nao-encontrada h2 {
+			font-size: 24px;
+			text-align: center;
+		}
+
+	footer {
+		margin-top: -80px;
+	}
+
+		footer .contato .enviar-formulario-contato {
+			display: block;
+			text-align: center;
+		}
+
+		footer .menu-rodape nav ul li {
+			text-align: center;
+		}
+
+		footer .redes-sociais-rodape {
+			text-align: center;
+		}
+
+		footer .logotipo-hausti-rodape {
+			text-align: center;
+		}
+
+}
